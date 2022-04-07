@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>Enter New Employee Details</title>
+</head>
+<body>
+<div align="center">
+    <h1>Enter next Employee Details</h1>
+    <br />
+    <form action="#" th:action="@{/save}" th:object="${employeeprofile}"
+          method="post">
+
+        <table border="0" cellpadding="10">
+            <tr>
+                <td>Employee Code:</td>
+                <td>
+                    <input type="number" th:field="*{Employee.code}" readonly="readonly" />
+                </td>
+            </tr>
+            <tr>
+                <td>Employee First Name:</td>
+                <td>
+                    <input type="text" th:field="*{Employee.firstname}" />
+                </td>
+            </tr>
+            <tr>
+                <td>Employee Last Name:</td>
+                <td>
+                    <input type="text" th:field="*{Employee.lastname}" />
+                </td>
+            </tr>
+            <tr>
+                <td>DOB</td>
+                <td><input type="date" th:field="*{Employee.birthday}" /></td>
+            </tr>
+            <tr>
+                <td>DOJ</td>
+                <td><input type="date" th:field="*{Employee.joining day}" /></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" th:field="*{Employee.email}" /></td>
+            </tr>
+            <tr>
+                <td>ContactNumber</td>
+                <td><input type="text" th:field="*{Employee.phn}" /></td>
+            </tr>
+            <tr>
+                <td>Salary</td>
+                <td><input type="number" th:field="*{Employee.salary}" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Save Details</button> </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
